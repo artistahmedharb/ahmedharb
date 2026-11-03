@@ -7,271 +7,143 @@
 <meta name="description" content="الموقع الرسمي للفنان أحمد حرب، مطرب عربي فلسطيني. أغانٍ هادئة ورومانسية بالعربية والتركية.">
 <meta property="og:title" content="أحمد حرب | Ahmed Harb">
 <meta property="og:description" content="أغانٍ هادئة ورومانسية بالعربية والتركية. الأغنية الجديدة: قالت حبيبي.">
-<meta property="og:image" content="hero.jpg">
+<meta property="og:image" content="https://ahmedharb.com/hero.jpg">
 <meta name="theme-color" content="#0b1114">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎙️%3C/text%3E%3C/svg%3E">
-<meta name="google-adsense-account" content="ca-pub-9242996523787104">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎤</text></svg>">
+
+<!-- AdSense - لا تمسحه -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9242996523787104" crossorigin="anonymous"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <style>
-:root{
-  --ink:#0b1114; --curtain:#14212a; --amber:#e9a45c; --copper:#b96a32; --ivory:#f4e8d6;
-  --mute:rgba(244,232,214,.68); --line:rgba(233,164,92,.22);
-  --display:"Aref Ruqaa","Amiri","Noto Naskh Arabic",serif;
-  --body:"IBM Plex Sans Arabic","Segoe UI",Tahoma,sans-serif;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--ink);color:var(--ivory);font-family:var(--body);font-weight:300;line-height:1.9;font-size:1.05rem;-webkit-font-smoothing:antialiased}
+:root{--bg:#0b1114;--fg:#eaf2f2;--muted:#9fb0b0;--line:#1b2a2a;--card:#101b1b;--accent:#6ee7d8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial}
 a{color:inherit;text-decoration:none}
-a:focus-visible,button:focus-visible,video:focus-visible{outline:2px solid var(--amber);outline-offset:4px;border-radius:4px}
-img,video{max-width:100%;display:block}
-.wrap{width:min(1080px,100% - 2.5rem);margin-inline:auto}
-
-/* ---------- Hero ---------- */
-.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
-.hero picture,.hero img.bg{position:absolute;inset:0;width:100%;height:100%;z-index:-3}
-.hero img.bg{object-fit:cover;object-position:50% 40%;transform-origin:85% 45%;animation:push 28s ease-out forwards}
-@keyframes push{from{transform:scale(1)}to{transform:scale(1.09)}}
-.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:
-  linear-gradient(to top,var(--ink) 4%,rgba(11,17,20,.55) 34%,transparent 62%),
-  linear-gradient(to right,rgba(11,17,20,.82) 0,rgba(11,17,20,.35) 26%,transparent 42%),
-  radial-gradient(circle at 96% 94%,var(--ink) 0,var(--ink) 4%,transparent 9%)}
-#dust{position:absolute;inset:0;width:100%;height:100%;z-index:-2;pointer-events:none}
-.nav{position:absolute;top:0;inset-inline:0;padding:1.2rem 0;z-index:5}
-.nav .wrap{display:flex;justify-content:space-between;align-items:center}
-.brand{font-family:var(--display);font-size:1.5rem;color:var(--amber)}
-.nav ul{display:flex;gap:1.6rem;list-style:none;font-size:.95rem;font-weight:400}
-.nav a{opacity:.82;transition:opacity .2s}
-.nav a:hover{opacity:1}
-.hero #top{width:calc(100% - 4rem)}
-.hero-copy{padding-block:0 clamp(3.5rem,9vh,6rem);margin-inline-start:auto;max-width:24rem;padding-inline-start:0}
-.hero h1{font-family:var(--display);font-weight:700;font-size:clamp(3rem,5.2vw,4.4rem);line-height:1.2;white-space:nowrap;color:var(--ivory);text-shadow:0 0 40px rgba(233,164,92,.35)}
-.hero p.lead{font-size:1.05rem;color:var(--mute);margin-top:.4rem;max-width:20rem}
-.cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}
-.btn{display:inline-block;padding:.75rem 1.6rem;border-radius:999px;font-weight:500;font-size:1rem;transition:transform .2s,background .2s,color .2s}
-.btn.solid{background:var(--amber);color:var(--ink)}
-.btn.solid:hover{background:var(--ivory);transform:translateY(-2px)}
-.btn.ghost{border:1px solid var(--line);color:var(--ivory)}
-.btn.ghost:hover{border-color:var(--amber);color:var(--amber)}
-.reveal{opacity:0;transform:translateY(18px);animation:in .9s cubic-bezier(.2,.7,.2,1) forwards}
-.reveal:nth-child(2){animation-delay:.25s}.reveal:nth-child(3){animation-delay:.5s}.reveal:nth-child(4){animation-delay:.75s}
-@keyframes in{to{opacity:1;transform:none}}
-
-/* ---------- Sections ---------- */
-section{padding-block:clamp(4rem,10vw,7rem)}
-h2{font-family:var(--display);font-weight:700;font-size:clamp(2rem,5vw,3.2rem);color:var(--amber);line-height:1.3;margin-bottom:1.2rem}
-
-.about .grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(2rem,6vw,5rem);align-items:center}
-.portrait{position:relative}
-.portrait img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;filter:saturate(.95)}
-.portrait::after{content:"";position:absolute;inset:-14px 14px 14px -14px;border:1px solid var(--line);border-radius:6px;z-index:-1}
-.about p{color:var(--mute);max-width:36rem}
-.about p+p{margin-top:1rem}
-
-.release{background:linear-gradient(180deg,var(--ink),var(--curtain) 50%,var(--ink));text-align:center}
-.release .song{font-family:var(--display);font-size:clamp(2.6rem,8vw,5rem);color:var(--ivory);line-height:1.2;text-shadow:0 0 36px rgba(233,164,92,.3)}
-.release .when{color:var(--mute);margin-top:.4rem}
-#count{display:flex;justify-content:center;gap:clamp(.8rem,3vw,2rem);margin:2rem 0 1rem;direction:ltr}
-#count div{min-width:4.4rem}
-#count b{display:block;font-family:var(--display);font-size:clamp(2.2rem,6vw,3.4rem);font-weight:400;color:var(--amber);line-height:1.1;font-variant-numeric:tabular-nums}
-#count span{font-size:.85rem;color:var(--mute)}
-#live{display:none;color:var(--amber);font-family:var(--display);font-size:1.8rem;margin:1.6rem 0 1rem}
-
-.listen .rows{border-top:1px solid var(--line)}
-.row{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.15rem .2rem;border-bottom:1px solid var(--line);transition:padding .25s,color .25s}
-.row:hover{padding-inline:1rem;color:var(--amber)}
-.row strong{font-weight:500;font-size:1.15rem}
-.row small{color:var(--mute);font-size:.92rem}
-
-.clip .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2rem,6vw,5rem);align-items:center}
-.phone{width:min(300px,100%);margin-inline:auto;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.55),0 0 60px rgba(233,164,92,.12);background:#000}
-.phone video{width:100%;aspect-ratio:9/16;object-fit:cover}
-.clip p{color:var(--mute);max-width:30rem}
-
-.follow .chips{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem}
-.chip{padding:.55rem 1.3rem;border:1px solid var(--line);border-radius:999px;transition:border-color .2s,color .2s,background .2s}
-.chip:hover{border-color:var(--amber);color:var(--ink);background:var(--amber)}
-
-.request{background:var(--curtain)}
-.request .box{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1.5rem}
-.request p{color:var(--mute);max-width:32rem}
-
-footer{padding-block:2.4rem;text-align:center;color:var(--mute);font-size:.9rem;border-top:1px solid var(--line)}
-footer a{color:var(--amber)}
-
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.nav{position:sticky;top:0;z-index:10;background:rgba(11,17,20,.8);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+.brand{font-weight:800;letter-spacing:.5px}
+.nav ul{display:flex;list-style:none;gap:1.2rem;margin:0;padding:0;color:var(--muted)}
+.nav a:hover{color:var(--fg)}
+.hero{display:grid;place-items:center;min-height:88vh;padding:30px 0}
+.hero-card{width:100%;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01));border:1px solid var(--line);border-radius:28px;overflow:hidden;display:grid;grid-template-columns:1.1fr .9fr}
+.hero-media{position:relative;min-height:520px;background:#0f1c1c}
+.hero-media img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-content{padding:36px}
+.kicker{color:var(--accent);letter-spacing:.2em;font-size:.8rem}
+h1{font-size:clamp(28px,5vw,44px);line-height:1.15;margin:.5rem 0}
+.lead{color:var(--muted);line-height:1.8}
+.cta{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+.btn{padding:12px 18px;border-radius:14px;border:1px solid var(--line);background:var(--card);color:var(--fg);font-weight:600}
+.btn.solid{background:var(--fg);color:#0b1114;border-color:var(--fg)}
+.section{padding:56px 0;border-top:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px}
+.card h3{margin:.2rem 0}
+.muted{color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.chip{border:1px solid var(--line);background:rgba(255,255,255,.02);padding:10px 14px;border-radius:999px}
+footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:.9rem}
+footer a{color:var(--muted)} footer a:hover{color:var(--fg)}
+/* تم اصلاح مشكلة الجوال هنا */
+@media (max-width:900px){.hero-card{grid-template-columns:1fr}.hero-media{min-height:420px}.grid{grid-template-columns:1fr}}
 @media (max-width:760px){
-  .nav ul{display:none}
-  .hero img.bg{object-position:50% 30%}
-  .hero-copy{margin-inline:auto;text-align:center;padding-top:6rem}
-  .hero p.lead{margin-inline:auto}.hero #top{width:min(1080px,100% - 2.5rem)}
-  .cta{justify-content:center}
-  .about .grid,.clip .grid{grid-template-columns:1fr}
-  .portrait::after{inset:-10px 10px 10px -10px}
-  .request .box{flex-direction:column;text-align:center}
-}
-@media (prefers-reduced-motion:reduce){
-  .hero img.bg{animation:none}.reveal{animation:none;opacity:1;transform:none}html{scroll-behavior:auto}
+  .nav .wrap{flex-wrap:wrap; gap:.8rem}
+  .nav ul{gap:.7rem; font-size:.82rem; flex-wrap:wrap}
+  .hero-content{padding:22px}
 }
 </style>
 </head>
 <body>
 
-<header class="hero">
-  <picture>
-    <source media="(max-width:760px)" srcset="hero-m.jpg">
-    <img class="bg" src="hero.jpg" alt="ميكروفون استوديو بإضاءة ذهبية" fetchpriority="high">
-  </picture>
-  <canvas id="dust" aria-hidden="true"></canvas>
-
-  <nav class="nav" aria-label="التنقل">
-    <div class="wrap">
-      <a class="brand" href="#top">أحمد حرب</a>
-      <ul>
-        <li><a href="#about">نبذة</a></li>
-        <li><a href="#release">جديدي</a></li>
-        <li><a href="#listen">استمع</a></li>
-        <li><a href="#follow">تابعني</a></li>
-        <li><a href="#request">اطلب أغنية</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <div class="wrap" id="top">
-    <div class="hero-copy">
-      <h1 class="reveal">أحمد حرب</h1>
-      <p class="lead reveal">مطرب عربي فلسطيني. أغانٍ هادئة ورومانسية بالعربية والتركية.</p>
-      <div class="cta reveal">
-        <a class="btn solid" href="#listen">استمع الآن</a>
-        <a class="btn ghost" href="#release">الأغنية الجديدة</a>
-      </div>
-    </div>
+<nav class="nav" aria-label="التنقل">
+  <div class="wrap">
+    <a class="brand" href="#">أحمد حرب</a>
+    <ul>
+      <li><a href="#about">نبذة</a></li>
+      <li><a href="#release">جديدي</a></li>
+      <li><a href="#listen">استمع</a></li>
+      <li><a href="#follow">تابعني</a></li>
+      <li><a href="#request">اطلب أغنية</a></li>
+    </ul>
   </div>
-</header>
+</nav>
 
-<main>
-  <section class="about" id="about">
-    <div class="wrap grid">
-      <div class="portrait"><img src="portrait.jpg" alt="الفنان أحمد حرب" loading="lazy"></div>
-      <div>
-        <h2>صوت هادئ، وكلمات من القلب</h2>
-        <p>أنا أحمد حرب، فنان فلسطيني أغنّي بالعربية والتركية. أحب الأغنية الرومانسية الهادئة التي تُسمع على مهل، وأنشر أعمالي على كل المنصات.</p>
-        <p>صدرت لي أغنية «موجوع قلبي» على Apple Music، وأطلق أغنية جديدة كل شهر.</p>
+<div class="wrap" id="top">
+  <section class="hero">
+    <div class="hero-card">
+      <div class="hero-media">
+        <img src="hero.jpg" alt="Ahmed Harb">
+      </div>
+      <div class="hero-content">
+        <div class="kicker">AHMED HARB • الموقع الرسمي</div>
+        <h1>صوت هادئ، إحساس عربي، ولمسة تركية</h1>
+        <p class="lead">أنا أحمد حرب، مطرب عربي فلسطيني. أقدم أغانٍ هادئة ورومانسية بالعربية والتركية. جديدي: <b>قالت حبيبي</b></p>
+        <div class="cta">
+          <a class="btn solid" href="#listen">استمع الآن</a>
+          <a class="btn" href="#release">الأغنية الجديدة</a>
+        </div>
+        
+        <div id="about" style="margin-top:28px">
+          <h3>نبذة</h3>
+          <p class="muted">مطرب عربي فلسطيني، أقدم محتوى غنائي هادئ ورومانسي. أغني بالعربية والتركية، وأشارك رحلتي معكم عبر المنصات.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="release" id="release">
-    <div class="wrap">
-      <h2>أغنية جديدة</h2>
-      <div class="song">قالت حبيبي</div>
-      <p class="when" id="when">تصدر في 30 أكتوبر 2026 الساعة 12:00 منتصف الليل بتوقيت إسطنبول</p>
-      <div id="count" role="timer" aria-live="off">
-        <div><b id="d">00</b><span>يوم</span></div>
-        <div><b id="h">00</b><span>ساعة</span></div>
-        <div><b id="m">00</b><span>دقيقة</span></div>
-        <div><b id="s">00</b><span>ثانية</span></div>
-      </div>
-      <div id="live">نزلت الآن على كل المنصات</div>
-      <div class="cta" style="justify-content:center">
-        <a class="btn solid" href="https://open.spotify.com/artist/7scJ4mmIBkhb2cbKcpVxyZ" target="_blank" rel="noopener">Spotify</a>
-        <a class="btn ghost" href="https://music.apple.com/tr/artist/ahmed-harb/1768548127" target="_blank" rel="noopener">Apple Music</a>
-      </div>
+  <section class="section" id="release">
+    <h2>جديدي: قالت حبيبي</h2>
+    <p class="muted">متوفرة الآن على جميع المنصات</p>
+    <div class="cta" style="margin-top:14px">
+      <a class="btn solid" href="https://open.spotify.com" target="_blank" rel="noopener">Spotify</a>
+      <a class="btn" href="https://music.apple.com" target="_blank" rel="noopener">Apple Music</a>
     </div>
   </section>
 
-  <section class="listen" id="listen">
-    <div class="wrap">
-      <h2>استمع إلى أغانيّ</h2>
-      <div class="rows">
-        <a class="row" href="https://open.spotify.com/artist/7scJ4mmIBkhb2cbKcpVxyZ" target="_blank" rel="noopener"><strong>Spotify</strong><small>صفحة الفنان</small></a>
-        <a class="row" href="https://music.apple.com/tr/artist/ahmed-harb/1768548127" target="_blank" rel="noopener"><strong>Apple Music</strong><small>موجوع قلبي وغيرها</small></a>
-        <a class="row" href="https://www.youtube.com/@ahmedharbOfficialPage" target="_blank" rel="noopener"><strong>YouTube</strong><small>القناة الرسمية</small></a>
-        <a class="row" href="https://on.soundcloud.com/4nYY7qWKc7QW2Ablom" target="_blank" rel="noopener"><strong>SoundCloud</strong><small>استمع مباشرة</small></a>
-      </div>
+  <section class="section" id="listen">
+    <h2>استمع</h2>
+    <div class="grid" style="margin-top:14px">
+      <a class="card" href="https://open.spotify.com" target="_blank" rel="noopener"><h3>Spotify</h3><p class="muted">استمع على سبوتيفاي</p></a>
+      <a class="card" href="https://music.apple.com" target="_blank" rel="noopener"><h3>Apple Music</h3><p class="muted">استمع على آبل</p></a>
+      <a class="card" href="https://www.youtube.com" target="_blank" rel="noopener"><h3>YouTube</h3><p class="muted">شاهد على يوتيوب</p></a>
+      <a class="card" href="https://www.tiktok.com/@ahmedharb44" target="_blank" rel="noopener"><h3>TikTok</h3><p class="muted">فيديوهات قصيرة</p></a>
     </div>
   </section>
 
-  <section class="clip" id="clip">
-    <div class="wrap grid">
-      <div class="phone">
-        <video src="clip.mp4" poster="clip-poster.jpg" controls playsinline preload="none" aria-label="مقطع من أعمال أحمد حرب"></video>
-      </div>
-      <div>
-        <h2>من الاستوديو إلى الشاشة</h2>
-        <p>مقطع قصير من عالم الأغنية. اضغط تشغيل واستمع.</p>
-      </div>
+  <section class="section" id="follow">
+    <h2>تابعني</h2>
+    <div class="chips">
+      <a class="chip" href="https://www.tiktok.com/@ahmedharb44" target="_blank" rel="noopener">TikTok</a>
+      <a class="chip" href="https://www.instagram.com/ahmedharb44" target="_blank" rel="noopener">Instagram</a>
+      <a class="chip" href="https://x.com/ahmedharb44" target="_blank" rel="noopener">X</a>
+      <a class="chip" href="https://www.snapchat.com/add/ahmedharb44" target="_blank" rel="noopener">Snapchat</a>
+      <a class="chip" href="https://t.me/ahmedharb44" target="_blank" rel="noopener">Telegram</a>
+      <a class="chip" href="https://linktr.ee/ahmedharb44" target="_blank" rel="noopener">كل الروابط</a>
     </div>
   </section>
 
-  <section class="follow" id="follow">
-    <div class="wrap">
-      <h2>تابعني</h2>
-      <p style="color:var(--mute)">أنشر جديدي أولاً بأول على هذه الحسابات.</p>
-      <div class="chips">
-        <a class="chip" href="https://www.tiktok.com/@ahmedharb_official" target="_blank" rel="noopener">TikTok</a>
-        <a class="chip" href="https://www.instagram.com/official_ahmedharb" target="_blank" rel="noopener">Instagram</a>
-        <a class="chip" href="https://x.com/ahmedofficial_t" target="_blank" rel="noopener">X</a>
-        <a class="chip" href="https://snapchat.com/t/fsKrN4v3" target="_blank" rel="noopener">Snapchat</a>
-        <a class="chip" href="https://t.me/ahmedharbofficial" target="_blank" rel="noopener">Telegram</a>
-        <a class="chip" href="https://linkbio.co/ahmedharb" target="_blank" rel="noopener">كل الروابط</a>
-      </div>
+  <section class="section" id="request">
+    <h2>اطلب أغنية</h2>
+    <p class="muted">عندك طلب خاص أو إهداء؟ أرسل لي</p>
+    <div class="cta">
+      <a class="btn solid" href="mailto:Ahmedharb44tiktok@gmail.com?subject=%D8%B7%D9%84%D8%A8%20%D8%A3%D8%BA%D9%86%D9%8A%D8%A9">أرسل طلبك عبر الإيميل</a>
+      <a class="btn" href="https://www.instagram.com/ahmedharb44" target="_blank" rel="noopener">راسلني على انستغرام</a>
     </div>
   </section>
 
-  <section class="request" id="request">
-    <div class="wrap box">
-      <div>
-        <h2>اطلب أغنية</h2>
-        <p>عندك أغنية تحب أن أغنّيها؟ أرسل اسمها على البريد وسأقرأ طلبك.</p>
+  <footer>
+    <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px">
+      <div>© <span id="y"></span> أحمد حرب - ahmedharb.com</div>
+      <div style="display:flex;gap:14px">
+        <a href="/about.html">من نحن</a>
+        <a href="/privacy.html">سياسة الخصوصية</a>
+        <a href="/contact.html">اتصل بنا</a>
       </div>
-      <a class="btn solid" href="mailto:Ahmedharb44tiktok@gmail.com?subject=طلب أغنية">أرسل طلبك</a>
     </div>
-  </section>
-</main>
-
-<footer style="padding:30px 20px;text-align:center;border-top:1px solid #222;background:#111">
-<div style="margin-bottom:15px">
-<a href="/about.html" style="color:#aaa;margin:0 10px;text-decoration:none">من نحن</a>
-<a href="/privacy.html" style="color:#aaa;margin:0 10px;text-decoration:none">سياسة الخصوصية</a>
-<a href="/contact.html" style="color:#aaa;margin:0 10px;text-decoration:none">اتصل بنا</a>
+  </footer>
 </div>
-<p style="color:#555;font-size:12px">© 2026 أحمد حرب. جميع الحقوق محفوظة.</p>
-</footer>
-<script>
-/* غبار ذهبي متصاعد في الهيرو */
-(function(){
-  var c=document.getElementById('dust'),x=c.getContext('2d');
-  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-  var W,H,P=[],N=70,dpr=Math.min(devicePixelRatio||1,2);
-  function size(){W=c.clientWidth;H=c.clientHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
-  function mk(init){return{x:Math.random()*W,y:init?Math.random()*H:H+10,r:Math.random()*1.7+.4,v:Math.random()*.28+.08,d:Math.random()*.4-.2,a:Math.random()*.55+.15,t:Math.random()*6}}
-  size();for(var i=0;i<N;i++)P.push(mk(true));
-  addEventListener('resize',size);
-  var vis=true;new IntersectionObserver(function(e){vis=e[0].isIntersecting}).observe(c);
-  (function loop(){
-    if(vis){x.clearRect(0,0,W,H);
-      for(var i=0;i<P.length;i++){var p=P[i];p.y-=p.v;p.x+=p.d+Math.sin(p.t+=.01)*.15;
-        if(p.y<-10)P[i]=mk(false);
-        x.beginPath();x.arc(p.x,p.y,p.r,0,6.283);x.fillStyle='rgba(233,164,92,'+p.a+')';x.shadowColor='rgba(233,164,92,.9)';x.shadowBlur=8;x.fill()}}
-    requestAnimationFrame(loop)})();
-})();
 
-/* العد التنازلي لإصدار «قالت حبيبي»: 30 أكتوبر 2026، 12:00 ص بتوقيت إسطنبول (UTC+3) */
-(function(){
-  var T=new Date('2026-10-30T00:00:00+03:00').getTime();
-  var el={d:d,h:h,m:m,s:s},box=document.getElementById('count'),live=document.getElementById('live'),when=document.getElementById('when');
-  function p(n){return String(n).padStart(2,'0')}
-  function tick(){
-    var t=T-Date.now();
-    if(t<=0){box.style.display='none';when.style.display='none';live.style.display='block';return}
-    el.d.textContent=p(Math.floor(t/864e5));el.h.textContent=p(Math.floor(t%864e5/36e5));
-    el.m.textContent=p(Math.floor(t%36e5/6e4));el.s.textContent=p(Math.floor(t%6e4/1e3));
-    setTimeout(tick,1000)}
-  tick();
-})();
-</script>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
